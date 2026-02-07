@@ -79,7 +79,7 @@ function logout() {
 
 // API Base
 function getApiBase() {
-    if (window.CATICASH_CONFIG?.adminApiUrl) {
+    if (window.CATICASH_CONFIG && window.CATICASH_CONFIG.adminApiUrl) {
         return window.CATICASH_CONFIG.adminApiUrl;
     }
     return localStorage.getItem('katicash.apiBase') || 'http://localhost:5000/api/admin';
